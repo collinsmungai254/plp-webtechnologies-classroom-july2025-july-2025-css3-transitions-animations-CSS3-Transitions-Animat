@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* 🎨✨ Part 1: Box Animation */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  margin: 20px 0;
+  transition: transform 0.5s ease;
+}
+
+.box.animate {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* 🎨🎬 Part 3: Modal Animation */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(0); }
+}
+
